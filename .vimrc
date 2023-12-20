@@ -1,4 +1,5 @@
 syntax on
+colorscheme desert
 map å <leader>
 set showmatch
 set list
@@ -16,7 +17,23 @@ set scrolloff=5
 set expandtab
 set softtabstop=4
 set cursorline
-highlight cursorline cterm=bold ctermfg=none ctermbg=none
-highlight cursorlineNr cterm=bold ctermfg=none ctermbg=none
+highlight CursorLine cterm=bold ctermfg=none ctermbg=none
+highlight CursorLineNr cterm=bold ctermfg=none ctermbg=none
+highlight TabLineFill ctermfg=8
+highlight TabLineSel ctermbg=8
+highlight TabLine ctermfg=8 ctermbg=none
 set wildmenu
 set wildmode=list,full
+nnoremap <silent> <leader>t :tabnew<CR>
+nnoremap <silent> <leader>l :Lexplore<CR>
+nnoremap <Tab><Tab> <C-W><C-W>
+set laststatus=2
+set statusline+=\ %F
+"set statusline+=\ %f
+set statusline+=%=
+set statusline+=\ %m
+set statusline+=\ %l:%c
+set statusline+=\ [%L]
+set statusline+=\ %y
+set statusline+=\ %r
+highlight StatusLine cterm=bold ctermfg=1 ctermbg=none
