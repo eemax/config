@@ -6,10 +6,16 @@ set listchars=nbsp:•,trail:•,precedes:«,extends:»,tab:→\
 set showbreak=↪\
 set linebreak
 set breakindent
+"set backspace=start
+set backspace=0
 set number relativenumber
 set clipboard=unnamedplus
 set ignorecase
 set smartcase
+set autoindent
+set incsearch
+set hlsearch
+set title
 set mouse=a
 set scrolloff=5
 set expandtab
@@ -21,7 +27,7 @@ set laststatus=2
 set statusline+=\ %F
 set statusline+=%=
 set statusline+=\ %m
-set statusline+=\ %l:%c
+set statusline+=\ %l,%c
 set statusline+=\ [%L]
 set statusline+=\ %y
 set statusline+=\ %r
