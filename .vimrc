@@ -32,12 +32,9 @@ set statusline+=\ [%L]
 set statusline+=\ %y
 set statusline+=\ %r
 highlight LineNr ctermfg=white
-highlight StatusLine cterm=bold ctermbg=8
-highlight CursorLine cterm=bold ctermfg=none ctermbg=none
-highlight CursorLineNr cterm=bold ctermfg=none ctermbg=none
-highlight TabLineFill ctermfg=8
-highlight TabLineSel ctermbg=8
-highlight TabLine ctermfg=8 ctermbg=none
+highlight StatusLine cterm=bold
+highlight CursorLine cterm=bold
+highlight CursorLineNr cterm=bold ctermfg=none
 nnoremap <silent> <leader>t :tabnew<CR>
 nnoremap <silent> <leader>l :Lexplore<CR>
 nnoremap <Tab><Tab> <C-W><C-W>
