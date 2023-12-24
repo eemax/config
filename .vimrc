@@ -6,8 +6,8 @@ set listchars=nbsp:•,trail:•,precedes:«,extends:»,tab:→\
 set showbreak=↪\
 set linebreak
 set breakindent
-"set backspace=start
-set backspace=0
+set backspace=
+set backspace=start
 set number relativenumber
 set clipboard=unnamedplus
 set ignorecase
@@ -27,10 +27,11 @@ set laststatus=2
 set statusline+=\ %F
 set statusline+=%=
 set statusline+=\ %m
-set statusline+=\ %l,%c
+set statusline+=\ %l,%v
 set statusline+=\ [%L]
 set statusline+=\ %y
 set statusline+=\ %r
+highlight LineNr ctermfg=white
 highlight StatusLine cterm=bold ctermbg=8
 highlight CursorLine cterm=bold ctermfg=none ctermbg=none
 highlight CursorLineNr cterm=bold ctermfg=none ctermbg=none
