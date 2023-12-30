@@ -10,7 +10,7 @@ set backspace=
 set backspace=start
 set number
 "set relativenumber
-set clipboard=unnamedplus
+"set clipboard=unnamedplus
 set ignorecase
 set smartcase
 set autoindent
@@ -31,15 +31,13 @@ set statusline+=%=
 set statusline+=\ %l,%v
 set statusline+=\ %y
 highlight LineNr ctermfg=white
-"highlight StatusLine cterm=underline
 highlight StatusLine cterm=reverse
-highlight StatusLineNC cterm=italic
+highlight StatusLineNC cterm=underline
 highlight CursorLine cterm=bold
 highlight CursorLineNr cterm=bold ctermfg=none
-highlight TabLine cterm=italic,reverse
+highlight TabLine cterm=reverse
 highlight TabLineSel cterm=bold,reverse
 highlight TabLineFill cterm=none
-nnoremap <silent> <leader>t :tabnew<CR>
 nnoremap <silent> <leader>l :Lexplore<CR>
 nnoremap <Tab><Tab> <C-W><C-W>
 let g:netrw_banner=0
