@@ -1,33 +1,29 @@
-# From the famous Cobalt2 sublime theme
-# Source github.com/wesbos/cobalt2/tree/master/Cobalt2
-
-# Default colors
-[colors.primary]
-background = '#122637'
-foreground = '#ffffff'
+# vscode theme with cobalt2 cursor
 
 [colors.cursor]
 text = '#122637'
 cursor = '#f0cb09'
 
-# Normal colors
-[colors.normal]
-black   = '#000000'
-red     = '#ff0000'
-green   = '#37dd21'
-yellow  = '#fee409'
-blue    = '#1460d2'
-magenta = '#ff005d'
-cyan    = '#00bbbb'
-white   = '#bbbbbb'
+[colors.primary]
+foreground = "#cccccc"
+background = "#1e1e1e"
 
-# Bright colors
+[colors.normal]
+black = "#000000"
+red = "#cd3131"
+green = "#0dbc79"
+yellow = "#e5e510"
+blue = "#2472c8"
+magenta = "#bc3fbc"
+cyan = "#11a8cd"
+white = "#e5e5e5"
+
 [colors.bright]
-black   = '#545454'
-red     = '#f40d17'
-green   = '#3bcf1d'
-yellow  = '#ecc809'
-blue    = '#5555ff'
-magenta = '#ff55ff'
-cyan    = '#6ae3f9'
-white   = '#ffffff'
+black = "#666666"
+red = "#f14c4c"
+green = "#23d18b"
+yellow = "#f5f543"
+blue = "#3b8eea"
+magenta = "#d670d6"
+cyan = "#29b8db"
+white = "#e5e5e5"
