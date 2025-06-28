@@ -2,6 +2,9 @@
     name = eemax
     email = 60387798+eemax@users.noreply.github.com
 
+[credential]
+    helper = store
+
 [alias]
     cm = commit -m
     aa = add --all
