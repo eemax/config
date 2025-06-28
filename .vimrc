@@ -10,21 +10,21 @@ set backspace=
 set backspace=start
 set number
 "set relativenumber
-"set clipboard=unnamedplus
+set clipboard=unnamedplus
 set ignorecase
 set smartcase
 set autoindent
 set incsearch
 set hlsearch
 set title
-"set mouse=a
+set mouse=a
 set scrolloff=5
 set expandtab
 set softtabstop=4
 set wildmenu
 set wildmode=list,full
-"set cursorline
-"set laststatus=2
+set cursorline
+set laststatus=2
 set statusline+=\ %F
 set statusline+=\ %m
 set statusline+=%=
