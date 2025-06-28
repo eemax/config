@@ -9,16 +9,13 @@ set breakindent
 set backspace=
 set backspace=start
 set number
-"set relativenumber
-set clipboard=unnamedplus
 set ignorecase
 set smartcase
 set autoindent
 set incsearch
 set hlsearch
 set title
-set mouse=a
-set scrolloff=5
+set scrolloff=4
 set expandtab
 set softtabstop=4
 set wildmenu
