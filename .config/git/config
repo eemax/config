@@ -1,0 +1,10 @@
+[user]
+    name = eemax
+    email = 60387798+eemax@users.noreply.github.com
+
+[alias]
+    cm = commit -m
+    aa = add --all
+
+[core]
+    editor = vim
