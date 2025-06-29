@@ -1,13 +1,12 @@
 syntax on
 map å <leader>
-set showmatch
 set list
 set listchars=nbsp:•,trail:•,precedes:«,extends:»,tab:→\
 set showbreak=↪\
 set linebreak
 set breakindent
 set backspace=
-set backspace=start
+set backspace=indent,eol,start
 set number
 set ignorecase
 set smartcase
@@ -15,9 +14,12 @@ set autoindent
 set incsearch
 set hlsearch
 set title
-set scrolloff=4
+set scrolloff=2
 set expandtab
-set softtabstop=4
+set softtabstop=2
+set shiftwidth=4
+set tabstop=4
+set display+=lastline
 set wildmenu
 set wildmode=list,full
 set cursorline
