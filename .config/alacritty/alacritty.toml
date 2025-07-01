@@ -1,8 +1,8 @@
 # vscode theme with cobalt2 cursor
 
 [colors.cursor]
-text = '#122637'
-cursor = '#f0cb09'
+text = "#122637"
+cursor = "#f0cb09"
 
 [colors.primary]
 foreground = "#cccccc"
@@ -27,3 +27,10 @@ blue = "#3b8eea"
 magenta = "#d670d6"
 cyan = "#29b8db"
 white = "#e5e5e5"
+
+[font.normal]
+family = "Iosevka Nerd Font Mono"
+style = "Regular"
+
+[font]
+size = 14
