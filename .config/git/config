@@ -5,9 +5,31 @@
 [credential]
     helper = store
 
+[pull]
+    rebase = true
+
+[push]
+    default = simple
+
+[rebase]
+    autoStash = true
+    autoSquash = true
+
+[merge]
+    conflictstyle = diff3
+
+[fetch]
+    prune = true
+
+[commit]
+    verbose = true
+
 [alias]
     cm = commit -m
     aa = add --all
+    aheadbehind = !git fetch origin && git log --oneline origin/main..HEAD && git log --oneline HEAD..origin/main
+    lg = log --oneline --graph --decorate --all
+    sm = stash push -m
 
 [core]
     editor = vim
