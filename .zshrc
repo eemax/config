@@ -1,6 +1,35 @@
-fopen() { [ -z "$1" ] && { echo "No pattern"; return 1; }; open "$(fd --hidden "$1" | fzf)"; }
-ffzf() { [ -z "$1" ] && { echo "No pattern"; return 1; }; fd --hidden "$1" | fzf; }
-fvim() { [ -z "$1" ] && { echo "No pattern"; return 1; }; vim "$(fd --hidden "$1" | fzf)"; }
-fcd() { [ -z "$1" ] && { echo "No pattern"; return 1; }; cd "$(fd --type d --hidden "$1" | fzf)"; }
+alias fdfzf='fd . --hidden | fzf'
+
+fopen() {
+  local file
+  file=$(fd --type f --hidden --exclude .git | fzf --exit-0 --select-1) || return
+  if [[ -n "$file" ]]; then
+    if command -v xdg-open &>/dev/null; then
+      xdg-open "$file"
+    elif command -v open &>/dev/null; then
+      open "$file"
+    else
+      echo "No file opener found (xdg-open/open)."
+      return 1
+    fi
+  fi
+}
+
+fvim() {
+  local item
+  item=$(fd --hidden --exclude .git | fzf --exit-0 --select-1) || return
+  if [[ -n "$item" ]]; then
+    vim "$item"
+  fi
+}
+
+fcd() {
+  local dir
+  dir=$(fd --type d --hidden --exclude .git \
+           | fzf --exit-0 --select-1) || return
+  if [[ -n "$dir" ]]; then
+    cd "$dir"
+  fi
+}
 
 eval "$(starship init zsh)"
