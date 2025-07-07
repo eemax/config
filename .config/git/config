@@ -25,10 +25,8 @@
     verbose = true
 
 [alias]
-    cm = commit -m
-    aa = add --all
     lg = log --graph --oneline --decorate --all --pretty=format:'%C(auto)%h %d %s %C(dim white)[%cr by %an]%C(reset)'
-    sm = stash push -m
+    sp = stash push -m
     ri = rebase -i
     del = reset --hard HEAD~1
     please = push --force-with-lease
