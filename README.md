@@ -37,3 +37,14 @@ Git credentials
 ```
 read -p "GitHub PAT:" PAT && echo "https://eemax:$PAT@github.com" > .git-credentials
 ```
+# bare git for config
+# 1. Clone as bare repo
+git clone --bare https://github.com/eemax/config.git $HOME/config
+
+# 2. Do not show untracked files
+
+git --git-dir=$HOME/.config-dotfiles --work-tree=$HOME config --local status.showUntrackedFiles no
+
+# 3. Checkout
+git --git-dir=$HOME/config --work-tree=$HOME checkout
+

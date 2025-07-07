@@ -28,7 +28,8 @@
     lg = log --graph --oneline --decorate --all --pretty=format:'%C(auto)%h %d %s %C(dim white)[%cr by %an]%C(reset)'
     sp = stash push -m
     ri = rebase -i
-    del = reset --hard HEAD~1
+    au = add -u
+    del1 = reset --hard HEAD~1
     please = push --force-with-lease
     cleanup = !git branch --merged | grep -v main | xargs -n 1 git branch -d
     amend = commit --amend --no-edit
