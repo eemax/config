@@ -1,3 +1,4 @@
+alias config='git --git-dir=$HOME/config --work-tree=$HOME'
 alias ffzf='fd . --hidden | fzf'
 
 fopen() {
