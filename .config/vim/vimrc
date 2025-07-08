@@ -1,5 +1,6 @@
 set rtp+=~/.vim
 syntax on
+filetype plugin indent on
 map å <leader>
 set ttimeout
 set ttimeoutlen=100
@@ -57,9 +58,10 @@ let g:netrw_keepdir=0
 call plug#begin('~/.vim/plugged')
 
 Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-commentary'
 Plug 'airblade/vim-gitgutter'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 
 call plug#end()
 
-colorscheme habamax
+"colorscheme habamax
