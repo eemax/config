@@ -1,45 +1,4 @@
-Download config
-```
-git clone https://github.com/eemax/config.git
-cp config/.config .config
-```
-Install Homebrew
-```
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-```
-Install Homebrew Packages
-```
-brew bundle install
-```
-Install Vim Plug
-```
-curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
-   https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-```
-Install Rust
-```
-curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
-
-```
-- export rust path
-
-bun install
-
-```
-curl -fsSL https://bun.sh/install | bash
-```
-nvm and node latest lts
-```
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.3/install.sh | bash
-nvm install --lts
-nvm use --lts
-```
-Git credentials
-```
-read -p "GitHub PAT:" PAT && echo "https://eemax:$PAT@github.com" > .git-credentials
-```
-# bare git for config
-# 1. Clone as bare repo
+# 1. Clone bare git repo
 ```
 git clone --bare https://github.com/eemax/config.git $HOME/config
 ```
@@ -55,4 +14,28 @@ git --git-dir=$HOME/config --work-tree=$HOME checkout
 # 4. If needed, add to .zshrc or .bashrc
 ```
 alias config='git --git-dir=$HOME/config --work-tree=$HOME'
+```
+Install Rust
+```
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+
+```
+- export rust path
+
+bun install
+
+```
+curl -fsSL https://bun.sh/install | bash
+```
+Git credentials
+```
+read -p "GitHub PAT:" PAT && echo "https://eemax:$PAT@github.com" > .git-credentials
+
+Install Homebrew
+```
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+```
+Install Homebrew Packages
+```
+brew bundle install
 ```
