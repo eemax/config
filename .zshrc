@@ -1,5 +1,6 @@
 alias config='git --git-dir=$HOME/config --work-tree=$HOME'
 alias fdfzf='fd . --hidden | fzf'
+alias rscp='rsync -ah --info=progress2'
 
 fopen() {
   local file
