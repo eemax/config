@@ -1,2 +1,6 @@
 .DS_Store
 *.swp
+*.log
+.env
+.vscode/
+.cursorignore
