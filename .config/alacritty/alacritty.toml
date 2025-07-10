@@ -1,10 +1,10 @@
-# Yellow Cursor
+# yellow cursor
 [colors.cursor]
 text = "#122637"
 cursor = "#f0cb09"
 
 [font.normal]
-family = "Iosevka Nerd Font Mono"
+family = "FiraCode Nerd Font"
 style = "Regular"
 
 [font]
