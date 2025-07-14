@@ -38,4 +38,9 @@ curl -fsSL https://bun.sh/install | bash
 ```
 source ~/.zshrc
 ```
+6. Install Bun global packages
+```
+chmod +x ~/.config/install-bun-global-packages.sh
+~/.config/install-bun-global-packages.sh
+```
 ## Installing essentials for Linux
