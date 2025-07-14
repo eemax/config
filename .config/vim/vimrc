@@ -1,4 +1,4 @@
-set rtp+=~/.vim
+set rtp+=~/.config/vim
 syntax on
 filetype plugin indent on
 map å <leader>
