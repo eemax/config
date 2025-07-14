@@ -16,24 +16,26 @@ git --git-dir=$HOME/config --work-tree=$HOME checkout
 ```
 read -p "GitHub PAT:" PAT && echo "https://eemax:$PAT@github.com" > .git-credentials
 ```
-## Install essentials
+## Installing essentials for Mac
 1. Install Rust
 ```
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
-
+. "$HOME/.cargo/env"
 ```
-- export rust path
-
-2. Install Bun
-
-```
-curl -fsSL https://bun.sh/install | bash
-```
-3. Install Homebrew
+2. Install Homebrew
 ```
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
-4. Install Homebrew packages
+3. Install Homebrew packages
 ```
 brew bundle install
 ```
+4. Install Bun
+```
+curl -fsSL https://bun.sh/install | bash
+```
+5. Source zsh for current session
+```
+source ~/.zshrc
+```
+## Installing essentials for Linux
