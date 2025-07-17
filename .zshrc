@@ -5,37 +5,15 @@ alias fdfzf='fd . --hidden | fzf'
 alias rscp='rsync -ah --info=progress2'
 
 # functions
-fopen() {
-  local file
-  file=$(fd --type f --hidden --exclude .git | fzf --exit-0 --select-1) || return
-  if [[ -n "$file" ]]; then
-    if command -v xdg-open &>/dev/null; then
-      xdg-open "$file"
-    elif command -v open &>/dev/null; then
-      open "$file"
-    else
-      echo "No file opener found (xdg-open/open)."
-      return 1
-    fi
-  fi
-}
+#
+# fzf files and open file
+fopen() { local file; file=$(fd --type f --hidden --exclude .git | fzf --exit-0 --select-1) && [[ -n "$file" ]] && { command -v xdg-open &>/dev/null && xdg-open "$file" || command -v open &>/dev/null && open "$file" || echo "No file opener found (xdg-open/open)."; }; }
 
-fvim() {
-  local item
-  item=$(fd --hidden --exclude .git | fzf --exit-0 --select-1) || return
-  if [[ -n "$item" ]]; then
-    vim "$item"
-  fi
-}
+# fzf and open it in vim
+fvim() { local item; item=$(fd --hidden --exclude .git | fzf --exit-0 --select-1) && [[ -n "$item" ]] && vim "$item"; }
 
-fcd() {
-  local dir
-  dir=$(fd --type d --hidden --exclude .git \
-           | fzf --exit-0 --select-1) || return
-  if [[ -n "$dir" ]]; then
-    cd "$dir"
-  fi
-}
+# fzf dirs and cd into dir
+fcd() { local dir; dir=$(fd --type d --hidden --exclude .git | fzf --exit-0 --select-1) && [[ -n "$dir" ]] && cd "$dir"; }
 
 # bun completions
 [ -s "/Users/mm/.bun/_bun" ] && source "/Users/mm/.bun/_bun"

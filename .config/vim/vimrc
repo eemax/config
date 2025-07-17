@@ -56,7 +56,7 @@ call plug#begin()
 
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-commentary'
-Plug 'airblade/vim-gitgutter'
+"Plug 'airblade/vim-gitgutter'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 
 call plug#end()

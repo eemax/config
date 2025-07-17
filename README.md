@@ -34,7 +34,7 @@ brew bundle install
 ```
 curl -fsSL https://bun.sh/install | bash
 ```
-5. Source zsh for current session
+5. Source zsh for current session (might only need to Linux install)
 ```
 source ~/.zshrc
 ```
@@ -44,3 +44,10 @@ chmod +x ~/.config/install-bun-global-packages.sh
 ~/.config/install-bun-global-packages.sh
 ```
 ## Installing essentials for Linux
+1.
+2.
+3. Change bash to zsh
+```
+command -v zsh && chsh -s "$(command -v zsh)" || echo "Zsh not found. Please install zsh first."
+```
+4. Install Bun
