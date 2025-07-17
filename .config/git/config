@@ -30,6 +30,7 @@
     ri = rebase -i
     au = add -u
     del1 = reset --hard HEAD~1
+    unfuck = !git reset --hard HEAD && git clean -df
     please = push --force-with-lease
     cleanup = !git branch --merged | grep -v main | xargs -n 1 git branch -d
     amend = commit --amend --no-edit
