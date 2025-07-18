@@ -1,4 +1,4 @@
-" Neovim specific
+" Neovim config
 source $HOME/.config/nvim/vim-plug/plugins.vim
 set number relativenumber
 set termguicolors
@@ -26,18 +26,26 @@ set tabstop=4
 set cursorline
 nnoremap <silent> <leader>l :Lexplore<CR>
 nnoremap <Tab><Tab> <C-W><C-W>
-let g:netrw_banner=0
+nnoremap <leader><tab> g<tab>
+nnoremap <leader>1 1gt
+nnoremap <leader>2 2gt
+nnoremap <leader>3 3gt
+nnoremap <leader>4 4gt
+let g:netrw_browse_split=3
+let g:netrw_winsize=25
 let g:netrw_liststyle=3
-let g:netrw_winsize=20
-let g:netrw_keepdir=0
 
-colorscheme habamax
+" Neovim plugins
+call plug#begin()
 
-" WIP
-" nmap <silent> <leader>t :NERDTreeToggle<Enter>
-" let NERDTreeMinimalUI = 1
-" let NERDTreeDirArrows = 1
-" let NERDTreeShowHidden = 1
-" let NERDTreeShowBookmarks = 1
-" autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | quit | endif
-" autocmd vimenter * if !argc() | NERDTree | endif
+Plug 'catppuccin/nvim', { 'as': 'catppuccin' }
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-commentary'
+"Plug 'airblade/vim-gitgutter'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+
+call plug#end()
+
+colorscheme catppuccin-mocha
+command Light colorscheme catppuccin-latte
+command Dark colorscheme catppuccin-mocha

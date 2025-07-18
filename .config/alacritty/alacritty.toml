@@ -9,3 +9,6 @@ style = "Regular"
 
 [font]
 size = 14
+
+[scrolling]
+multiplier = 1
