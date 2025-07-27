@@ -3,7 +3,9 @@
     email = 60387798+eemax@users.noreply.github.com
 
 [credential]
-    helper = store
+    helper = manager
+	helper = 
+	helper = /usr/local/share/gcm-core/git-credential-manager
 
 [pull]
     rebase = true
@@ -40,3 +42,5 @@
 
 [core]
     editor = vim
+[credential "https://dev.azure.com"]
+	useHttpPath = true

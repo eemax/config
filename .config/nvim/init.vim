@@ -26,6 +26,7 @@ set tabstop=4
 set cursorline
 nnoremap <silent> <leader>l :Lexplore<CR>
 nnoremap <Tab><Tab> <C-W><C-W>
+tnoremap <Esc> <C-\><C-n> " in terminal mode exit with esc
 nnoremap <leader><tab> g<tab>
 nnoremap <leader>1 1gt
 nnoremap <leader>2 2gt
