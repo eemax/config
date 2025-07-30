@@ -4,8 +4,6 @@
 
 [credential]
     helper = manager
-	helper = 
-	helper = /usr/local/share/gcm-core/git-credential-manager
 
 [pull]
     rebase = true
@@ -18,7 +16,7 @@
     autoSquash = true
 
 [merge]
-    conflictstyle = diff3
+    conflictstyle = zdiff3
 
 [fetch]
     prune = true
@@ -31,6 +29,7 @@
     sp = stash push -m
     ri = rebase -i
     au = add -u
+    gds = diff --staged
     del1 = reset --hard HEAD~1
     unfuck = !git reset --hard HEAD && git clean -df
     please = push --force-with-lease
@@ -41,6 +40,11 @@
     yolo = !git add -A && git commit -m \"$(curl -s https://whatthecommit.com/index.txt)\"
 
 [core]
-    editor = vim
-[credential "https://dev.azure.com"]
-	useHttpPath = true
+    editor = nvim
+    pager = delta
+
+[delta]
+    side-by-side = true
+
+[interactive]
+    diffFilter = delta --color-only

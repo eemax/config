@@ -1,15 +1,13 @@
-
-
 [git_status]
 format = "($ahead_behind$conflicted$stashed$deleted$renamed$modified$untracked$staged)"
 stashed = "[Stashed ${count} ](green)"
 ahead = "[Ahead ${count} ](red)"
 behind = "[Behind ${count} ](red)"
-untracked = "[U${count} ](yellow)"
-modified = "[M${count} ](yellow)"
+untracked = "[Un.${count} ](red)"
+modified = "[Mod.${count} ](yellow)"
 staged = "[󰐕${count} ](green)"
-deleted = "[D${count} ](red)" 
-renamed = "[R${count} ](yellow)"
+deleted = "[Del.${count} ](red)" 
+renamed = "[Re.${count} ](yellow)"
 conflicted = "[Conflict ${count} ](red)"
 diverged = "[Diverged ](red)"
 

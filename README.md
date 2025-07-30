@@ -12,42 +12,39 @@ git --git-dir=$HOME/config --work-tree=$HOME config --local push.autoSetupRemote
 ```
 git --git-dir=$HOME/config --work-tree=$HOME checkout
 ```
-4. Add Git credentials
+## Install essentials
+1. Install nvm
 ```
-read -p "GitHub PAT:" PAT && echo "https://eemax:$PAT@github.com" > .git-credentials
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.3/install.sh | bash
 ```
-## Installing essentials for Mac
-1. Install Rust
+2. Use latest lts
 ```
-curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
-. "$HOME/.cargo/env"
+nvm install --lts
+nvm use --lts
 ```
-2. Install Homebrew
-```
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-```
-3. Install Homebrew packages
-```
-brew bundle install
-```
-4. Install Bun
+3. Install Bun
 ```
 curl -fsSL https://bun.sh/install | bash
 ```
-5. Source zsh for current session (might only need to Linux install)
+4. Install Bun global packages
 ```
-source ~/.zshrc
-```
-6. Install Bun global packages
-```
-chmod +x ~/.config/install-bun-global-packages.sh
 ~/.config/install-bun-global-packages.sh
 ```
-## Installing essentials for Linux
-1.
-2.
-3. Change bash to zsh
+5. Install Rust
 ```
-command -v zsh && chsh -s "$(command -v zsh)" || echo "Zsh not found. Please install zsh first."
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 ```
-4. Install Bun
+## Installing Mac packages
+1. Install Homebrew
+```
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+```
+2. Install Homebrew packages
+```
+brew bundle install --file=~/.config/Brewfile
+```
+## Clean up
+```
+config restore .zshrc
+config restore .config/git/config
+```
