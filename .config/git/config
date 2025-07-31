@@ -29,14 +29,14 @@
     sp = stash push -m
     ri = rebase -i
     au = add -u
-    gds = diff --staged
+    ds = diff --staged
     del1 = reset --hard HEAD~1
     unfuck = !git reset --hard HEAD && git clean -df
     please = push --force-with-lease
     cleanup = !git branch --merged | grep -v main | xargs -n 1 git branch -d
     amend = commit --amend --no-edit
-    fixup-to = !git commit --fixup=$(git log --oneline | head -10 | fzf | cut -d' ' -f1)
-    interactive = !git rebase -i $(git merge-base HEAD origin/main)
+    fixup = !git commit --fixup=$(git log --oneline | head -10 | fzf | cut -d' ' -f1)
+    rebasemychanges = !git rebase -i $(git merge-base HEAD origin/main)
     yolo = !git add -A && git commit -m \"$(curl -s https://whatthecommit.com/index.txt)\"
 
 [core]

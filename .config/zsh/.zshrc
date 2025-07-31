@@ -1,10 +1,18 @@
-# source
-source $ZDOTDIR/.zsh_functions
+# Vi binds
+bindkey -v
+export KEYTIMEOUT=1
 
-# alias
-alias cp='cp -iv'
+# Built in autocomplete
+autoload -U compinit; compinit
+_comp_options+=(globdots) # With hidden files
+
+# +---------+
+# | Aliases |
+# +---------+
+
+alias cp='cp -aiv'
 alias mv='mv -iv'
-alias rm='rm -iv'
+alias rm='rm -Iv'
 alias cat='bat'
 alias ls='eza --icons --group-directories-first'
 alias lsa='eza -l -a --no-permissions --no-user --git --icons --group-directories-first'
@@ -13,9 +21,7 @@ alias vim='nvim'
 alias vi='\vim'
 alias config='git --git-dir=$HOME/config --work-tree=$HOME'
 alias rsync='rsync -ah --info=progress2'
-
-autoload -U compinit; compinit
-_comp_options+=(globdots) # With hidden files
+alias fzff="fzf --preview 'bat --color=always --style=numbers --line-range=:500 {}' --bind 'enter:execute(nvim {})'"
 
 # +---------+
 # | Options |
@@ -25,32 +31,26 @@ setopt AUTO_LIST            # Automatically list choices on ambiguous completion
 setopt MENU_COMPLETE        # Automatically highlight first element of completion menu
 setopt COMPLETE_IN_WORD     # Complete from both ends of a word.
 
-# history
+# History
 setopt APPEND_HISTORY            # Makes sure history is appended rather than overwriting it.
 setopt INC_APPEND_HISTORY        # History is written as soon as they are executed, not just when shell exits.
 setopt SHARE_HISTORY             # Share history between all sessions.
 setopt HIST_IGNORE_DUPS          # Do not record an event that was just recorded again.
 setopt HIST_IGNORE_ALL_DUPS      # Delete an old recorded event if a new event is a duplicate.
+setopt HIST_IGNORE_SPACE         # Do not record an event starting with a space.
 
-# vi binds
-bindkey -v
-export KEYTIMEOUT=1
+# +--------+
+# | Source |
+# +--------+
 
-# bun
-export BUN_INSTALL="$HOME/.bun"
-export PATH="$BUN_INSTALL/bin:$PATH"
-[ -s "/Users/mm/.bun/_bun" ] && source "/Users/mm/.bun/_bun" # This loads bun completions
+# Zsh functions
+source $ZDOTDIR/.zsh_functions
 
-# nvm
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion, same for zsh
-
-# starship
+# Starship
 eval "$(starship init zsh)"
 
-# zoxide
+# Zoxide
 eval "$(zoxide init zsh)"
 
-# zsh syntax highlighting
+# Zsh syntax highlighting
 source "/opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"

@@ -12,6 +12,27 @@ git --git-dir=$HOME/config --work-tree=$HOME config --local push.autoSetupRemote
 ```
 git --git-dir=$HOME/config --work-tree=$HOME checkout
 ```
+## Installing essentials first - Mac packages
+1. Install Homebrew
+```
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+```
+2. Essentials for zsh to load
+```
+brew install starship
+brew install zoxide
+brew install zsh-syntax-highlighting
+```
+3. also needed for load - Install Rust
+```
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+```
+## Can use zsh now
+
+2. Install Homebrew packages
+```
+brew bundle install --file=~/.config/Brewfile
+```
 ## Install essentials
 1. Install nvm
 ```
@@ -29,19 +50,6 @@ curl -fsSL https://bun.sh/install | bash
 4. Install Bun global packages
 ```
 ~/.config/install-bun-global-packages.sh
-```
-5. Install Rust
-```
-curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
-```
-## Installing Mac packages
-1. Install Homebrew
-```
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-```
-2. Install Homebrew packages
-```
-brew bundle install --file=~/.config/Brewfile
 ```
 ## Clean up
 ```
