@@ -1,8 +1,8 @@
 # XDG
 export XDG_CONFIG_HOME="$HOME/.config"
-#export XDG_DATA_HOME="$XDG_CONFIG_HOME/.local/share"
-#export XDG_STATE_HOME="$XDG_CONFIG_HOME/.local/state"
-#export XDG_CACHE_HOME="$XDG_CONFIG_HOME/.cache"
+export XDG_DATA_HOME="$HOME/.local/share"
+export XDG_STATE_HOME="$HOME/.local/state"
+export XDG_CACHE_HOME="$HOME/.cache"
 
 # Editor
 export EDITOR="code"
@@ -16,7 +16,8 @@ export FZF_DEFAULT_OPTS="--height 90% \
 
 # Zsh
 export ZDOTDIR="$XDG_CONFIG_HOME/zsh"
-export HISTFILE="$ZDOTDIR/.zsh_history"
+export SHELL_SESSION_DIR="$XDG_STATE_HOME/zsh/sessions"
+export HISTFILE="$XDG_STATE_HOME/zsh/history"
 export HISTSIZE=10000
 export SAVEHIST=10000
 

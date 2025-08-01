@@ -2,8 +2,9 @@
 bindkey -v
 export KEYTIMEOUT=1
 
-# Built in autocomplete
-autoload -U compinit; compinit
+# Completions that dump to .cache
+autoload -U compinit
+compinit -d "$XDG_CACHE_HOME/zsh/compdump"
 _comp_options+=(globdots) # With hidden files
 
 # +---------+
@@ -27,9 +28,9 @@ alias fzff="fzf --preview 'bat --color=always --style=numbers --line-range=:500 
 # | Options |
 # +---------+
 
-setopt AUTO_LIST            # Automatically list choices on ambiguous completion.
-setopt MENU_COMPLETE        # Automatically highlight first element of completion menu
-setopt COMPLETE_IN_WORD     # Complete from both ends of a word.
+setopt AUTO_LIST                 # Automatically list choices on ambiguous completion.
+setopt MENU_COMPLETE             # Automatically highlight first element of completion menu
+setopt COMPLETE_IN_WORD          # Complete from both ends of a word.
 
 # History
 setopt APPEND_HISTORY            # Makes sure history is appended rather than overwriting it.
@@ -44,7 +45,7 @@ setopt HIST_IGNORE_SPACE         # Do not record an event starting with a space.
 # +--------+
 
 # Zsh functions
-source $ZDOTDIR/.zsh_functions
+source $ZDOTDIR/functions
 
 # Starship
 eval "$(starship init zsh)"
