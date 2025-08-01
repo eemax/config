@@ -1,6 +1,3 @@
-set runtimepath+=$XDG_CONFIG_HOME/vim
-set viminfo+=n$XDG_CONFIG_HOME/vim/viminfo
-
 syntax on
 map å <leader>
 set ttimeout

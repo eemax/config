@@ -1,6 +1,10 @@
-# +-------+
-# | Paths |
-# +-------+
+# Editor
+export EDITOR="code"
+export VISUAL="code"
+
+# +---------+
+# |  Paths  |
+# +---------+
 
 # Brew
 eval "$(/opt/homebrew/bin/brew shellenv)"
