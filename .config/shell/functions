@@ -1,0 +1,5 @@
+# fzf and open it in vim
+fvim() { local item; item=$(fd --hidden --exclude .git | fzf --exit-0 --select-1) && [[ -n "$item" ]] && vim "$item"; }
+
+# fzf dirs and cd into dir
+fcd() { local dir; dir=$(fd --type d --hidden --exclude .git | fzf --exit-0 --select-1) && [[ -n "$dir" ]] && cd "$dir"; }
