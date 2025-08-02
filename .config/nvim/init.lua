@@ -1,3 +1,6 @@
+-- Create alias mapping so å also acts as leader
+vim.keymap.set('', 'å', '<leader>', { remap = true })
+
 -- Basic settings
 vim.opt.number = true
 vim.opt.relativenumber = true

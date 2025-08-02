@@ -1,5 +1,5 @@
 [git_status]
-format = '($ahead_behind$conflicted$stashed$deleted$renamed$modified$untracked$staged)'
+format = '($diverged$ahead_behind$conflicted$stashed$deleted$renamed$modified$untracked$staged)'
 stashed = '[Stashed\(${count}\) ](green)'
 ahead = '[Ahead\(${count}\) ](red)'
 behind = '[Behind\(${count}\) ](red)'

@@ -4,9 +4,6 @@ export XDG_DATA_HOME="$HOME/.local/share"
 export XDG_STATE_HOME="$HOME/.local/state"
 export XDG_CACHE_HOME="$HOME/.cache"
 
-# Zsh
-export ZDOTDIR="$XDG_CONFIG_HOME/zsh"
-
 # Tool directories (so scripts can find them)
 export BUN_INSTALL="$HOME/.bun"
 export NVM_DIR="$HOME/.nvm"
