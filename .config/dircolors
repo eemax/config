@@ -1,0 +1,482 @@
+# Modern dircolors configuration file
+# Updated for contemporary file types, programming languages, and improved colors
+# Copyright (C) 1996-2017 Free Software Foundation, Inc.
+# Modernized and extended for 2025
+# 
+# This configuration uses 256-color codes (38;5;N) for better terminal compatibility
+# while maintaining readability across different terminal themes
+
+# Terminal type definitions - comprehensive modern terminal support
+COLORTERM ?*
+TERM Eterm
+TERM ansi
+TERM *color*
+TERM con[0-9]*x[0-9]*
+TERM cons25
+TERM console
+TERM cygwin
+TERM dtterm
+TERM gnome
+TERM gnome-256color
+TERM hurd
+TERM jfbterm
+TERM konsole
+TERM kterm
+TERM linux
+TERM linux-c
+TERM mlterm
+TERM putty
+TERM rxvt*
+TERM screen*
+TERM st
+TERM st-256color
+TERM terminator
+TERM tmux*
+TERM vt100
+TERM xterm*
+TERM xterm-256color
+TERM xterm-kitty
+TERM alacritty
+TERM wezterm
+TERM ghostty
+
+# Basic file type colors (using 256-color codes for maximum compatibility)
+NORMAL 00                    # no color code at all
+FILE 00                      # regular file: use no color at all
+RESET 0                      # reset to "normal" color
+DIR 38;5;33                  # directory: bright blue (better than 01;94)
+LINK 38;5;51                 # symbolic link: bright cyan
+MULTIHARDLINK 00             # regular file with more than one link
+FIFO 40;38;5;136             # pipe: yellow background with brown text
+SOCK 38;5;207                # socket: bright magenta
+DOOR 38;5;207                # door: bright magenta
+BLK 38;5;244;48;5;136        # block device driver: gray on yellow
+CHR 38;5;244;48;5;136        # character device driver: gray on yellow  
+ORPHAN 38;5;235;48;5;160     # symlink to nonexistent file: dark gray on red
+MISSING 00                   # missing files
+SETUID 38;5;255;48;5;160     # file that is setuid (u+s): white on red
+SETGID 38;5;16;48;5;136      # file that is setgid (g+s): black on yellow
+CAPABILITY 38;5;255;48;5;160 # file with capability
+STICKY_OTHER_WRITABLE 38;5;16;48;5;46   # dir that is sticky and other-writable (+t,o+w)
+OTHER_WRITABLE 38;5;33;48;5;46           # dir that is other-writable (o+w) and not sticky
+STICKY 38;5;255;48;5;33                  # dir with the sticky bit set (+t) and not other-writable
+
+# Executables (bright green with 256-color)
+EXEC 38;5;46                 # executable files: bright green
+
+# PROGRAMMING LANGUAGES (using 256-color palette for better distinction)
+# Web Development
+.html 38;5;208               # HTML: orange
+.htm 38;5;208
+.xhtml 38;5;208
+.shtml 38;5;208
+.css 38;5;81                 # CSS: bright cyan
+.scss 38;5;207               # Sass: magenta
+.sass 38;5;207
+.less 38;5;113               # Less: light green
+.js 38;5;185                 # JavaScript: pale yellow
+.mjs 38;5;185                # ES6 modules
+.jsx 38;5;81                 # React JSX: cyan
+.ts 38;5;68                  # TypeScript: blue
+.tsx 38;5;68                 # TypeScript React
+.vue 38;5;113                # Vue.js: green
+.svelte 38;5;202             # Svelte: orange-red
+.php 38;5;99                 # PHP: purple
+.asp 38;5;99
+.aspx 38;5;99
+
+# Modern Web Frameworks & Tools
+.json 38;5;178               # JSON: orange
+.json5 38;5;178
+.jsonc 38;5;178
+.yaml 38;5;208               # YAML: bright orange
+.yml 38;5;208
+.toml 38;5;178               # TOML: orange
+.xml 38;5;144                # XML: tan
+.svg 38;5;99                 # SVG: purple
+
+# Add AI/ML and Data Science files
+.py 38;5;61                  # Python: dark blue
+.pyw 38;5;61
+.pyx 38;5;61                 # Cython
+.pyi 38;5;61                 # Python interface
+.ipynb 38;5;48               # Jupyter notebooks: bright green
+.h5 38;5;166                 # HDF5 files: orange
+.hdf5 38;5;166
+.npz 38;5;166                # NumPy compressed arrays
+.npy 38;5;166                # NumPy arrays
+.pkl 38;5;166                # Pickle files
+.pickle 38;5;166
+.joblib 38;5;166             # Joblib files
+.model 38;5;166              # Model files
+.onnx 38;5;166               # ONNX models
+.pt 38;5;166                 # PyTorch models
+.pth 38;5;166
+.safetensors 38;5;166        # Safetensors format
+
+# Modern development files
+.nix 38;5;110                # Nix expression language
+.dhall 38;5;178              # Dhall configuration language
+.just 38;5;113               # Justfile (make alternative)
+.task 38;5;113               # Taskfile
+.earthfile 38;5;208          # Earthly build automation
+.bazel 38;5;76               # Bazel BUILD files
+.bzl 38;5;76                 # Bazel .bzl files
+.workspace 38;5;76           # Bazel WORKSPACE
+.deno 38;5;113               # Deno files
+.gleam 38;5;207              # Gleam language
+.elixir 38;5;99              # Elixir
+.ex 38;5;99
+.exs 38;5;99
+.eex 38;5;99
+
+# JavaScript/Node.js ecosystem
+.node 38;5;113               # Node: green
+.coffee 38;5;94              # CoffeeScript: brown
+.litcoffee 38;5;94
+
+# Systems Programming
+.c 01;36            # C: cyan
+.h 00;36            # C headers
+.cpp 01;36          # C++: cyan
+.cxx 01;36
+.cc 01;36
+.hpp 00;36          # C++ headers
+.hxx 00;36
+.hh 00;36
+.rs 01;91           # Rust: bright red
+.go 01;96           # Go: bright cyan
+.zig 01;33          # Zig: yellow
+
+# JVM Languages
+.java 01;31         # Java: red
+.class 00;31        # Java bytecode
+.jar 01;31          # Java archive
+.war 01;31          # Web application archive
+.ear 01;31          # Enterprise archive
+.kt 01;95           # Kotlin: magenta
+.kts 01;95          # Kotlin script
+.scala 01;31        # Scala: red
+.sc 01;31
+.clj 01;32          # Clojure: green
+.cljs 01;32
+.cljc 01;32
+
+# .NET / C#
+.cs 01;35           # C#: magenta
+.fs 01;35           # F#
+.vb 01;35           # VB.NET
+.dll 00;35          # Dynamic libraries
+.exe 01;92          # Windows executables
+
+# Scripting Languages
+.sh 01;32           # Shell scripts: green
+.bash 01;32
+.zsh 01;32
+.fish 01;32
+.csh 01;32
+.tcsh 01;32
+.ksh 01;32
+.rb 01;31           # Ruby: red
+.rbw 01;31
+.gemspec 01;31
+.pl 01;34           # Perl: blue
+.pm 01;34
+.t 01;34            # Perl tests
+.lua 01;94          # Lua: blue
+.r 01;36            # R: cyan
+.R 01;36
+
+# Mobile Development
+.swift 01;91        # Swift: bright red
+.m 01;35            # Objective-C: magenta
+.mm 01;35           # Objective-C++
+.dart 01;94         # Dart/Flutter: blue
+.kt 01;95           # Kotlin (Android): magenta
+
+# Functional Languages
+.hs 01;95           # Haskell: magenta
+.lhs 01;95
+.elm 01;32          # Elm: green
+.ml 01;33           # OCaml: yellow
+.mli 01;33
+.fs 01;35           # F#: magenta
+.fsx 01;35
+.fsi 01;35
+
+# Database
+.sql 01;33          # SQL: yellow
+.sqlite 01;33
+.sqlite3 01;33
+.db 01;33
+.psql 01;33
+
+# Configuration Files
+.conf 01;33         # Configuration files: yellow
+.config 01;33
+.cfg 01;33
+.ini 01;33
+.env 01;33          # Environment files
+.properties 01;33
+.dockerfile 01;96   # Docker: bright cyan
+.dockerignore 00;90
+.gitignore 00;90    # Git files: dark gray
+.gitconfig 01;33
+.gitmodules 01;33
+.gitattributes 01;33
+
+# Modern Build Tools & Package Managers
+.makefile 01;32     # Make: green
+.mk 01;32           # Make include files
+.cmake 01;32        # CMake
+.gradle 01;32       # Gradle
+.sbt 01;32          # SBT (Scala)
+.pom 01;33          # Maven POM
+.yarnrc 01;33
+.lock 00;33         # Lock files (yarn.lock, poetry.lock, etc.)
+.pipfile 01;34      # Pipenv
+
+# Documentation
+.md 01;37           # Markdown: bright white
+.markdown 01;37
+.mdown 01;37
+.mkd 01;37
+.rst 01;37          # reStructuredText
+.txt 00;37          # Plain text: white
+.rtf 00;37
+.adoc 01;37         # AsciiDoc
+.org 01;37          # Org mode
+.tex 01;37          # LaTeX
+.latex 01;37
+.bib 01;37          # Bibliography
+
+# Archives (bright red with 256-color precision)
+.tar 38;5;160
+.tgz 38;5;160
+.arc 38;5;160
+.arj 38;5;160
+.taz 38;5;160
+.lha 38;5;160
+.lz4 38;5;160
+.lzh 38;5;160
+.lzma 38;5;160
+.tlz 38;5;160
+.txz 38;5;160
+.tzo 38;5;160
+.t7z 38;5;160
+.zip 38;5;160
+.z 38;5;160
+.Z 38;5;160
+.dz 38;5;160
+.gz 38;5;160
+.lrz 38;5;160
+.lz 38;5;160
+.lzo 38;5;160
+.xz 38;5;160
+.zst 38;5;160               # Zstandard
+.tzst 38;5;160
+.bz2 38;5;160
+.bz 38;5;160
+.tbz 38;5;160
+.tbz2 38;5;160
+.tz 38;5;160
+.deb 38;5;160               # Debian packages
+.rpm 38;5;160               # RPM packages
+.rar 38;5;160
+.alz 38;5;160
+.ace 38;5;160
+.zoo 38;5;160
+.cpio 38;5;160
+.7z 38;5;160
+.rz 38;5;160
+.cab 38;5;160
+.wim 38;5;160
+.swm 38;5;160
+.dwm 38;5;160
+.esd 38;5;160
+.dmg 38;5;160               # macOS disk images
+.iso 38;5;160               # ISO images
+.img 38;5;160               # Disk images
+.appimage 38;5;160          # AppImage
+.snap 38;5;160              # Snap packages
+.flatpak 38;5;160           # Flatpak
+.msi 38;5;160               # Windows installer
+
+# Images (magenta)
+.jpg 01;95
+.jpeg 01;95
+.mjpg 01;95
+.mjpeg 01;95
+.gif 01;95
+.bmp 01;95
+.pbm 01;95
+.pgm 01;95
+.ppm 01;95
+.tga 01;95
+.xbm 01;95
+.xpm 01;95
+.tif 01;95
+.tiff 01;95
+.png 01;95
+.svg 01;95
+.svgz 01;95
+.mng 01;95
+.pcx 01;95
+.webp 01;95         # WebP images
+.avif 01;95         # AVIF images
+.heic 01;95         # HEIC (iPhone)
+.heif 01;95         # HEIF
+.raw 01;95          # RAW camera formats
+.cr2 01;95          # Canon RAW
+.nef 01;95          # Nikon RAW
+.arw 01;95          # Sony RAW
+.dng 01;95          # Adobe DNG
+.psd 01;95          # Photoshop
+.xcf 01;95          # GIMP
+.sketch 01;95       # Sketch files
+.fig 01;95          # Figma files
+
+# Videos (bright magenta)
+.mov 01;95
+.mpg 01;95
+.mpeg 01;95
+.m2v 01;95
+.mkv 01;95
+.webm 01;95
+.ogm 01;95
+.mp4 01;95
+.m4v 01;95
+.mp4v 01;95
+.vob 01;95
+.qt 01;95
+.nuv 01;95
+.wmv 01;95
+.asf 01;95
+.rm 01;95
+.rmvb 01;95
+.flc 01;95
+.avi 01;95
+.fli 01;95
+.flv 01;95
+.gl 01;95
+.dl 01;95
+.yuv 01;95
+.cgm 01;95
+.emf 01;95
+.ogv 01;95
+.ogx 01;95
+.3gp 01;95          # Mobile video
+.3g2 01;95
+.mts 01;95          # AVCHD
+.m2ts 01;95
+.ts 01;95           # Transport stream
+
+# Audio (cyan)
+.aac 00;96
+.au 00;96
+.flac 00;96
+.m4a 00;96
+.mid 00;96
+.midi 00;96
+.mka 00;96
+.mp3 00;96
+.mpc 00;96
+.ogg 00;96
+.ra 00;96
+.wav 00;96
+.oga 00;96
+.opus 00;96
+.spx 00;96
+.xspf 00;96
+.wma 00;96          # Windows Media Audio
+.m4b 00;96          # Audiobook
+.aiff 00;96         # AIFF
+.alac 00;96         # Apple Lossless
+
+# Fonts
+.ttf 01;34          # TrueType fonts: blue
+.otf 01;34          # OpenType fonts
+.woff 01;34         # Web fonts
+.woff2 01;34
+.eot 01;34
+
+# Virtual Machine & Container Images
+.ova 01;33          # Virtual appliance: yellow
+.ovf 01;33
+.vmdk 01;33         # VMware
+.vdi 01;33          # VirtualBox
+.qcow2 01;33        # QEMU
+
+# Temporary & Backup files (dark gray - 256-color)
+.tmp 38;5;244
+.temp 38;5;244
+.bak 38;5;244
+.backup 38;5;244
+.old 38;5;244
+.orig 38;5;244
+.swp 38;5;244               # Vim swap files
+.swo 38;5;244
+*~ 38;5;244                 # Backup files
+# Note: macOS .DS_Store and Windows Thumbs.db are exact filenames
+# They need special handling in shell aliases or ls wrappers
+.cache 38;5;244
+.log 38;5;244               # Log files
+
+# Performance and optimization  
+.profile 38;5;178           # Performance profiles
+.perf 38;5;178
+.flame 38;5;178             # Flame graphs
+.trace 38;5;178             # Trace files
+
+# Add shell completion and environment files
+.completion 38;5;113        # Shell completions
+.completions 38;5;113
+.environ 38;5;178           # Environment files
+.envrc 38;5;178             # direnv files
+
+# Encrypted/Security files
+.gpg 01;91          # GPG encrypted: bright red
+.pgp 01;91
+.asc 01;91          # ASCII armored
+.sig 01;91          # Signatures
+.p12 01;91          # PKCS#12
+.pem 01;91          # PEM certificates
+.crt 01;91          # Certificates
+.key 01;91          # Private keys
+
+# Cloud & Infrastructure
+.tf 01;95           # Terraform: magenta
+.tfvars 01;95
+.tfstate 01;95
+.hcl 01;95          # HashiCorp Configuration Language
+.nomad 01;95
+.consul 01;95
+.k8s.yaml 01;96     # Kubernetes: bright cyan
+.k8s.yml 01;96
+
+# Modern file formats
+.epub 01;32         # E-books: green
+.mobi 01;32
+.azw 01;32
+.azw3 01;32
+.pdf 01;31          # PDF: red
+.ps 01;31           # PostScript
+.djvu 01;31         # DjVu
+.cbr 01;31          # Comic books
+.cbz 01;31
+
+# Data formats (enhanced with more modern formats)
+.csv 38;5;178               # CSV: orange
+.tsv 38;5;178               # Tab-separated
+.parquet 38;5;178           # Parquet
+.avro 38;5;178              # Avro
+.proto 38;5;178             # Protocol Buffers
+.msgpack 38;5;178           # MessagePack
+.pickle 38;5;178            # Python pickle
+.pkl 38;5;178
+.arrow 38;5;178             # Apache Arrow
+.orc 38;5;178               # ORC format
+.feather 38;5;178           # Feather format
+.hdf 38;5;178               # HDF format
+.nc 38;5;178                # NetCDF
+.mat 38;5;178               # MATLAB files

@@ -39,8 +39,13 @@
     branch-cleanup = !git branch --merged | grep -v main | xargs -n 1 git branch -d
 
 [core]
-    editor = nvim
+    editor = code --wait
     pager = delta
+
+[merge]
+    tool = code
+[mergetool "code"]
+    cmd = code --wait --merge $BASE $LOCAL $REMOTE $MERGED
 
 [delta]
     side-by-side = true
