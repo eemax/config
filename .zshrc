@@ -70,7 +70,7 @@ zstyle ':completion:*:*:-command-:*:*' group-order aliases builtins functions co
 zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}' 'r:|[._-]=* r:|=*'
 
 # Options
-setopt CORRECT_ALL               # Tries to correct commands, arguments, filenames
+#setopt CORRECT_ALL               # Tries to correct commands, arguments, filenames
 setopt LIST_AMBIGUOUS            # Complete as much of a completion until it gets ambiguous
 setopt COMPLETE_IN_WORD          # Complete from both ends of a word.
 setopt AUTOCD
@@ -134,9 +134,16 @@ alias fzfbat="fzf --preview 'bat --color=always --style=numbers --line-range=:50
 alias d='dirs -v'
 for index ({1..9}) alias "$index"="cd +${index}"; unset index
 
+alias term='nvim -c "terminal"'
+
 # FUNCTIONS
 # fzf and open it in vim
 fvim() { local item; item=$(fd --hidden --exclude .git | fzf --exit-0 --select-1) && [[ -n "$item" ]] && vim "$item"; }
 
 # fzf dirs and cd into dir
 fcd() { local dir; dir=$(fd --type d --hidden --exclude .git | fzf --exit-0 --select-1) && [[ -n "$dir" ]] && cd "$dir"; }
+
+# Added by LM Studio CLI (lms)
+export PATH="$PATH:/Users/ml/.lmstudio/bin"
+# End of LM Studio CLI section
+

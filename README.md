@@ -12,6 +12,10 @@ git --git-dir=$HOME/config --work-tree=$HOME config --local push.autoSetupRemote
 ```
 git --git-dir=$HOME/config --work-tree=$HOME checkout
 ```
+## Change Mac defaults
+```
+~/.config/mac-defaults.sh
+```
 ## Installing essentials for zsh to load
 1. Install Rust
 ```

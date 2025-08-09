@@ -2,10 +2,8 @@
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
 
-vim.g.mapleader = "\\"
+vim.g.mapleader = " "
 vim.g.maplocalleader = "\\"
--- Create alias mapping so å also acts as leader
-vim.keymap.set('', 'å', '<leader>', { remap = true })
 
 -- Basic settings
 vim.opt.number = true
@@ -35,7 +33,7 @@ vim.opt.title = true
 vim.opt.scrolloff = 2
 vim.opt.expandtab = true
 vim.opt.softtabstop = 2
-vim.opt.shiftwidth = 4
+vim.opt.shiftwidth = 2
 vim.opt.tabstop = 4
 vim.opt.cursorline = true
 
