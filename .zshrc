@@ -80,6 +80,7 @@ setopt PUSHD_IGNORE_DUPS
 # History
 HISTSIZE=10000                   # Commands kept in memory
 SAVEHIST=10000                   # Commands saved to $HISTFILE across sessions
+setopt SHARE_HISTORY
 setopt APPEND_HISTORY            # Makes sure history is appended rather than overwriting it.
 setopt HIST_IGNORE_ALL_DUPS      # Delete an old recorded event if a new event is a duplicate.
 

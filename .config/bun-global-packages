@@ -1,3 +1,4 @@
 @anthropic-ai/claude-code
 @openai/codex
 @google/gemini-cli
+@qwen-code/qwen-code@latest

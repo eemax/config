@@ -1,5 +1,5 @@
 syntax on
-map å <leader>
+let mapleader = ' '
 set ttimeout
 set ttimeoutlen=100
 set list
